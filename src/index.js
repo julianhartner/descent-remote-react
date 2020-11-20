@@ -1,14 +1,41 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Navigation from './components/Navigation/Navigation.js';
 import Player from './components/Player/Player.js';
+import Overlord from './components/Overlord/Overlord.js';
+import PlayerSelection from './components/PlayerSelection/PlayerSelection.js';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
+
+function Routing() {
+    return (
+      <div>
+        <Navigation />
+        <Switch>
+          <Route path="/:username/hero">
+            <Player />
+          </Route>
+          <Route path="/:username/overlord">
+            <Overlord />
+          </Route>
+          <Route path="/">
+            <PlayerSelection />
+          </Route>
+        </Switch>
+      </div>
+    );
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Player />
-  </React.StrictMode>,
+  <Router>
+    <Routing />
+  </Router>,
   document.getElementById('root')
 );
 

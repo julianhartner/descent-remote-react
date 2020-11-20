@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class Player extends Component {
+class Overlord extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -43,4 +43,4 @@ class Player extends Component {
     }
 }
 
-export default Player;
+export default Overlord;
