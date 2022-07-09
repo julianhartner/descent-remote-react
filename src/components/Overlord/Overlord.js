@@ -11,7 +11,7 @@ class Overlord extends Component {
 
     componentDidMount() {
         fetch("http://localhost:5000/api/GetUser?username=Helya", {
-            mode: "cors"
+            mode: 'cors'
         })
             .then(res => res.json())
             .then(

@@ -23,11 +23,11 @@ class Navigation extends Component {
                         currUrlPath: window.location.pathname
                     });
                 },
-                (error) => {
-                    this.setState({
-                        error
-                    });
-                }
+                // (error) => {
+                //     this.setState({
+                //         error
+                //     });
+                // }
             );
     }
 
